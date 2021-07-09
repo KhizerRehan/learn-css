@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #DAFFEF;
+}
+
+.navbar {
+  position: absolute;
+  right: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #b9e4c8;
+  text-align: center;
+  -webkit-transition: 0.8 ease-in-out;
+  transition: 0.8 ease-in-out;
+}
+
+.navbar ul.side-nav {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navbar ul.side-nav .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar ul.side-nav .nav-item .nav-link {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 1em;
+  padding: 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.navbar ul.side-nav .nav-item .nav-link:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.navbar ul.side-nav .nav-item .site-name {
+  text-decoration: none;
+  font-size: 2em;
+  padding: 1.1em;
+  color: whitesmoke;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.navbar ul.side-nav .nav-item:last-child a > i {
+  font-size: 1.5em;
+  margin: 0 0.5em;
+}
+
+.toggle-collapse {
+  float: left;
+  margin-left: -3em;
+  margin-top: 0.6em;
+  content: "";
+  outline: inherit;
+  background: transparent;
+  border: 0;
+}
+
+.toggle-collapse .toggle-icon,
+.toggle-collapse .toggle-icon::before,
+.toggle-collapse .toggle-icon::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  position: fixed;
+  background: black;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+.toggle-collapse .toggle-icon::before {
+  position: absolute;
+  left: -1px;
+  margin-top: -0.4em;
+}
+
+.toggle-collapse .toggle-icon::after {
+  position: absolute;
+  right: -1.1em;
+}
+
+.toggle-collapse .toggle-icon {
+  width: 15px;
+}
+
+.show .toggle-icon {
+  width: 30px;
+}
+
+.show .toggle-icon::after {
+  position: absolute;
+  right: 0em;
+}

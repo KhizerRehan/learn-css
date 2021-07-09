@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+
+    <link rel="stylesheet" href="sidebar-drawer.css">
+    <script src="https://use.fontawesome.com/0da91a1b74.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar" id="navId">
+            <button class="toggle-collapse" onclick="toggleMenu(this)">
+                <span class="toggle-icon"></span>
+            </button>
+            <ul class="side-nav">
+                <li class="nav-item"><a href="#" class="site-name">Daily Tuition</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Feature</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </A>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        function toggleMenu(evt) {
+            evt.classList.toggle('show');
+
+            var navElem = document.getElementById('navId'); 
+            var style = window.getComputedStyle(navElem);
+            var rigth = style.getPropertyValue('right');
+            
+            debugger;
+            if(rigth === "0px") {
+              navElem.style.right  = "-280px"
+            }
+            else{
+                navElem.style.right = "0px"
+            }
+        }
+    </script>
+</body>
+
+</html>
