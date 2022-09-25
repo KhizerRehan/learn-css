@@ -43,16 +43,13 @@
     <script type="text/javascript">
         function toggleMenu(evt) {
             evt.classList.toggle('show');
-
-            var navElem = document.getElementById('navId'); 
+            var navElem = document.getElementById('navId');
             var style = window.getComputedStyle(navElem);
             var rigth = style.getPropertyValue('right');
-            
-            debugger;
-            if(rigth === "0px") {
-              navElem.style.right  = "-280px"
+            if (rigth === "0px") {
+                navElem.style.right = "-280px"
             }
-            else{
+            else {
                 navElem.style.right = "0px"
             }
         }
