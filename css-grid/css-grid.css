@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: lightgray;
+}
+
+.box1 {
+    background-color: lightcoral;
+}
+
+.box2 {
+    background-color: lightblue;
+}
+
+.box3 {
+    background-color: lightgreen;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 1fr takes only height of content */
+    grid-template-rows: 1fr 1fr; 
+    /* Inorder to take full height to take full vertical height of available dimension*/
+    height: 100vh; 
+}
+
+
+/* Expand Box1 to Full Row 
+
+grid-column: 1/3;
+
+ grid-column-start: 1;
+ grid-column-end: 3;
+*/
+.box3 {
+ grid-column: 1/3;
+}
