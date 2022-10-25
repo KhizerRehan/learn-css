@@ -1,0 +1,147 @@
+:root {
+    --radius: 5px;
+    --padding: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(221, 221, 221);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container {
+    color: rgb(16, 15, 15);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 1fr;
+    grid-template-areas:
+        "tv"
+        "cupboard";
+    height: 100vh;
+}
+
+#tv-section {
+    background: #c9268d;
+    grid-area: tv;
+    border-radius: var(--radius);
+    padding: var(--padding);
+}
+
+#tv {
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    font-size: 40px;
+    font-family: 'ui-sans-serif';
+    font-weight: bold;
+}
+
+#cupboard-section {
+    background: #c9268d;
+    border-radius: var(--radius);
+    padding: var(--padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "lhs middle rhs";
+}
+
+/* LHS */
+#lhs{
+    grid-area: lhs;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(60, 157, 151);
+}
+
+#lhs .lhs-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.lhs-inner__box1 {
+    background-color: rgb(206, 78, 78);
+}
+
+.lhs-inner__box2 {
+    background-color: rgb(158, 210, 68);
+}
+
+
+/* MIDDLE */
+
+#middle{
+    grid-area: middle;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "box1"
+    "box2";
+    grid-gap: 10px;
+    margin: 0px 15px;
+}
+
+.middle__box1 {
+  grid-area: box1;
+  background-color: rgb(153, 161, 160);
+}
+
+.middle__box2 {
+    grid-area: box2;
+    background-color: rgb(153, 161, 160);
+}
+
+
+/* RHS */
+
+#rhs{
+    grid-area: rhs;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(60, 157, 151);
+}
+
+#rhs .rhs-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.rhs-inner__box1 {
+    background-color: rgb(206, 78, 78);
+}
+
+.rhs-inner__box2 {
+    background-color: rgb(158, 210, 68);
+}
+
+/* **************************** */
+/* Utilities */
+/* **************************** */
+
+.center-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.handle {
+  height: 100px;
+  width: 100px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
