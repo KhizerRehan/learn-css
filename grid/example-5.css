@@ -15,17 +15,6 @@
  .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 2fr repeat(6, 1fr);
-    grid-template-areas: 
-    "nav"
-    "header"
-    "content"
-    "signup"
-    "feature1"
-    "feature2"
-    "feature3"
-    "footer";
 }
 
 nav {
@@ -57,17 +46,77 @@ header {
     grid-area: feature2;
 }   
 #feature3 {
-    background-color: #cac4fd;
-    grid-area: feature3;
+ background-color: #cac4fd;
+ grid-area: feature3;
 }    
 
 footer {
-    background-color: #e57b2d;
-    grid-area: footer;
+ background-color: #e57b2d;
+ grid-area: footer;
 }
 
 .center-align {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+/* **************************** */
+/* Desktop */
+/* **************************** */
+
+@media only screen and (min-width: 768px) {
+ .container {
+     background-color: red;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 0.5fr 1.5fr 2fr 1fr 3fr 1fr;
+     grid-template-areas: 
+     "nav nav nav"
+     "header header header"
+     "feature1 feature2 feature3"
+     "signup signup signup"
+     "content content content"
+     "footer footer footer";
+ }
+}
+
+/* **************************** */
+/* Tablet */
+/* **************************** */
+
+@media only screen and (min-width: 552px) and (max-width: 767px)  {
+  .container {
+      background-color: blue;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 2fr repeat(3, 1fr);
+      grid-template-areas: 
+      "nav nav"
+      "header header"
+      "content content"
+      "signup feature1"
+      "feature2 feature3"
+      "footer footer";
+  }
+}
+
+/* **************************** */
+/* Mobile */
+/* **************************** */
+
+@media only screen and (max-width: 550px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 2fr repeat(5, 1fr);
+        grid-template-areas: 
+        "nav"
+        "header"
+        "content"
+        "signup"
+        "feature1"
+        "feature2"
+        "feature3"
+        "footer";
+    }
 }
