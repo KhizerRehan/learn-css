@@ -1,0 +1,36 @@
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin size($width, $height: $width, $force: false) {
+  @if $force == false {
+    height: $height;
+    width: $width;
+  } @else {
+    /* stylelint-disable-line */
+    max-height: $height;
+    max-width: $width;
+    min-height: $height;
+    min-width: $width;
+  }
+}
+
+@mixin background-image($url, $width, $height: $width) {
+  @include size($width, $height, true);
+
+  background-image: url($url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+}

@@ -1,0 +1,27 @@
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$sides: (top, right, bottom, left);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    // Margins:
+    // e.g mt-5, mr-5, mb-5, ml-5
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    // Padding:
+    // e.g pt-5, pr-5, pb-5, pl-5
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+// Widths:
+// e.g w5, w10, w15, w20
+$widthSpaces: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100);
+@each $space in $widthSpaces {
+  .w#{$space} {
+    width: #{$space}+ "%" !important;
+  }
+}
