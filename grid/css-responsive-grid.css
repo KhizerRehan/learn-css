@@ -1,0 +1,145 @@
+:root {
+    --nav-color: #192d31;
+    --sidebar-color: #2c7668;
+    --main-color: #9fb0ab;
+    --content-color: #adc2a7;
+    --footer-color: #7eb6a2;
+    --padding: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 24px;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    background-color: azure;
+    grid-gap: 0.2rem 0.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 1.5fr 2fr 1fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "sidebar main main main"
+        "sidebar content1 content2 content3"
+        "sidebar footer footer footer"
+}
+
+nav {
+    grid-area: nav;
+    padding: var(--padding);
+    background-color: var(--nav-color);
+}
+
+main {
+    grid-area: main;
+    padding: var(--padding);
+    background-color: var(--main-color)
+}
+
+#sidebar {
+    grid-area: sidebar;
+    padding: var(--padding);
+    background-color: var(--sidebar-color)
+}
+
+#content1 {
+    grid-area: content1;
+    padding: var(--padding);
+    background-color: var(--content-color);
+}
+
+#content2 {
+    grid-area: content2;
+    padding: var(--padding);
+    background-color: var(--content-color);
+}
+
+#content3 {
+    grid-area: content3;
+    padding: var(--padding);
+    background-color: var(--content-color);
+}
+
+footer {
+    grid-area: footer;
+    padding: var(--padding);
+    background-color: var(--footer-color);
+}
+
+
+/* Mobile Devices (e.g., smartphones) */
+@media only screen and (max-width: 767px) {
+
+    /* CSS rules for mobile devices */
+    .container {
+        grid-gap: 0.2rem 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 2fr repeat(4, 1fr);
+        grid-template-areas:
+            "nav"
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer"
+    }
+
+}
+
+/* Tablets (e.g., iPads, Android tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+
+    .container {
+        grid-gap: 0.2rem 0.2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 2.5fr repeat(3, 1fr);
+        grid-template-areas:
+            "nav nav nav"
+            "sidebar main main"
+            "sidebar content1 content1"
+            "sidebar content2 content2"
+            "sidebar content3 content3"
+            "footer footer footer"
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    #sidebar {
+        grid-area: sidebar;
+    }
+
+    #content1 {
+        grid-area: content1;
+    }
+
+    #content2 {
+        grid-area: content2;
+    }
+
+    #content3 {
+        grid-area: content3;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+}
